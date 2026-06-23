@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 const WEB_PAGE_SCHEMA = "{\"@context\":\"https://schema.org\",\"@type\":\"WebPage\",\"name\":\"Bästa Hälsokost för Seniorer 2026 | Jämför & Spara\",\"description\":\"Bästa hälsokost för seniorer 2026 ✓ Uppdaterad 2026. Jämför 6 alternativ och hitta rätt produkt för dina behov. Klicka för att spara nu!\",\"url\":\"https://halsokostkollen.vercel.app\",\"datePublished\":\"2026-06-23\",\"dateModified\":\"2026-06-23\",\"inLanguage\":\"sv-SE\",\"publisher\":{\"@type\":\"Organization\",\"name\":\"Hälsokostkollen\",\"url\":\"https://halsokostkollen.vercel.app\"},\"breadcrumb\":{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Hem\",\"item\":\"https://halsokostkollen.vercel.app\"}]}}";
-const ITEM_LIST_SCHEMA = "{\"@context\":\"https://schema.org\",\"@type\":\"ItemList\",\"name\":\"Bästa Hälsokost för Seniorer 2026 — Jämför 6 Alternativ — Jämförelse 2026\",\"description\":\"Hitta rätt hälsokost för seniorer bland topplistorna\",\"numberOfItems\":6,\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"item\":{\"@type\":\"Product\",\"name\":\"Apotea\",\"url\":\"https://www.apotea.se\",\"description\":\"Sveriges största nätapotek — fri frakt\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.8\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"207\"}}},{\"@type\":\"ListItem\",\"position\":2,\"item\":{\"@type\":\"Product\",\"name\":\"Apotek Hjärtat\",\"url\":\"https://www.apotekhjartat.se\",\"description\":\"Rådgivning av farmaceut — klick & hämta\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.6\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"295\"}}},{\"@type\":\"ListItem\",\"position\":3,\"item\":{\"@type\":\"Product\",\"name\":\"Kronans Apotek\",\"url\":\"https://www.kronansapotek.se\",\"description\":\"Lojalitetsprogram med KronansPlus-rabatter\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.5\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"212\"}}},{\"@type\":\"ListItem\",\"position\":4,\"item\":{\"@type\":\"Product\",\"name\":\"LloydsApotek\",\"url\":\"https://www.lloydsapotek.se\",\"description\":\"Internationell kedja med brett sortiment\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.3\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"116\"}}},{\"@type\":\"ListItem\",\"position\":5,\"item\":{\"@type\":\"Product\",\"name\":\"Meds\",\"url\":\"https://www.meds.se\",\"description\":\"Prisvärt nätapotek med snabb leverans\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.4\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"194\"}}},{\"@type\":\"ListItem\",\"position\":6,\"item\":{\"@type\":\"Product\",\"name\":\"Apoteket\",\"url\":\"https://www.apoteket.se\",\"description\":\"Statligt apotek med trygg och etablerad service\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.2\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"337\"}}}]}";
+const ITEM_LIST_SCHEMA = "{\"@context\":\"https://schema.org\",\"@type\":\"ItemList\",\"name\":\"Bästa Hälsokost för Seniorer 2026 — Jämför 6 Alternativ — Jämförelse 2026\",\"description\":\"Hitta rätt hälsokost för seniorer bland topplistorna\",\"numberOfItems\":8,\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"item\":{\"@type\":\"Product\",\"name\":\"Gymgrossisten\",\"url\":\"https://www.gymgrossisten.com\",\"description\":\"Sveriges ledande hälsokostbutik — protein, vitaminer & kosttillskott\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.8\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"430\"}}},{\"@type\":\"ListItem\",\"position\":2,\"item\":{\"@type\":\"Product\",\"name\":\"Bodystore\",\"url\":\"https://www.bodystore.com\",\"description\":\"Premium hälsokost med fokus på kvalitet och märkesprodukter\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.7\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"414\"}}},{\"@type\":\"ListItem\",\"position\":3,\"item\":{\"@type\":\"Product\",\"name\":\"Proteinbolaget\",\"url\":\"https://www.proteinbolaget.se\",\"description\":\"Prisvärt proteinpulver och sportnäring — bäst pris per kilo\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.6\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"415\"}}},{\"@type\":\"ListItem\",\"position\":4,\"item\":{\"@type\":\"Product\",\"name\":\"iHerb\",\"url\":\"https://www.iherb.com\",\"description\":\"Internationellt utbud — 35 000+ produkter levererat till Sverige\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.6\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"327\"}}},{\"@type\":\"ListItem\",\"position\":5,\"item\":{\"@type\":\"Product\",\"name\":\"Holland & Barrett\",\"url\":\"https://www.hollandandbarrett.se\",\"description\":\"Brittisk hälsokedja med fokus på naturliga kosttillskott\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.5\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"276\"}}},{\"@type\":\"ListItem\",\"position\":6,\"item\":{\"@type\":\"Product\",\"name\":\"Sportamore\",\"url\":\"https://www.sportamore.se\",\"description\":\"Sport och träning — kläder, utrustning och sportnäring\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.5\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"446\"}}},{\"@type\":\"ListItem\",\"position\":7,\"item\":{\"@type\":\"Product\",\"name\":\"Vitaminstore\",\"url\":\"https://www.vitaminstore.se\",\"description\":\"Specialiserad vitamin- och mineralbutik — enkelt att hitta rätt\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.4\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"486\"}}},{\"@type\":\"ListItem\",\"position\":8,\"item\":{\"@type\":\"Product\",\"name\":\"Nyttoteket\",\"url\":\"https://www.nyttoteket.se\",\"description\":\"Ekologisk hälsokost och naturläkemedel — rena ingredienser\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.4\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"216\"}}}]}";
 const ARTICLE_SCHEMA = "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Bästa Hälsokost för Seniorer 2026 — Jämför 6 Alternativ\",\"description\":\"Hitta rätt hälsokost för seniorer bland topplistorna\",\"datePublished\":\"2026-06-23\",\"dateModified\":\"2026-06-23\",\"author\":{\"@type\":\"Organization\",\"name\":\"Hälsokostkollen\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Hälsokostkollen\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://halsokostkollen.vercel.app\"}}";
 const FAQ_SCHEMA = "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Vilken hälsokost är bäst för seniorer?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Den bästa hälsokosten för seniorer beror på individuella behov. Viktiga produkter inkluderar multivitaminer och omega-3 tillskott.\"}},{\"@type\":\"Question\",\"name\":\"Var kan jag köpa hälsokost online?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Du kan köpa hälsokost online från leverantörer som Apotea, Apotek Hjärtat och Meds.\"}},{\"@type\":\"Question\",\"name\":\"Är alla hälsokostprodukter säkra för äldre?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"De flesta är säkra men det är viktigt att rådfråga en läkare, särskilt om du har medicinska tillstånd.\"}},{\"@type\":\"Question\",\"name\":\"Hur vet jag vilken produkt jag behöver?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Identifiera dina hälsobehov och läs produktbeskrivningar noga. Konsultera gärna en läkare.\"}},{\"@type\":\"Question\",\"name\":\"Finns det hälsokost som förbättrar ledhälsan?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Ja, produkter med glukosamin och kondroitin kan stödja ledhälsa och rörelseförmåga.\"}},{\"@type\":\"Question\",\"name\":\"Hur påverkar hälsokost seniorers energinivåer?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Hälsokost som innehåller B-vitaminer och järn kan hjälpa till att öka energinivåerna hos seniorer.\"}},{\"@type\":\"Question\",\"name\":\"Är dyrare hälsokost bättre?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Inte alltid. Det är viktigt att jämföra ingredienser och kundrecensioner för att bedöma kvalitet.\"}},{\"@type\":\"Question\",\"name\":\"Kan jag returnera hälsokost om jag är missnöjd?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Det beror på leverantörens policy. Kontrollera returrätt innan du köper.\"}}]}";
 
@@ -12,7 +12,7 @@ export async function getStaticProps() {
   var year = now.getFullYear();
   var month = now.toLocaleDateString('sv-SE', { month: 'long' });
   var updated = now.toLocaleDateString('sv-SE', { year: 'numeric', month: 'long', day: 'numeric' });
-  var fallback = [{"name":"Apotea","url":"https://www.apotea.se","description":"Sveriges största nätapotek — fri frakt","badge":"Störst online","score":"4.8","price":"Fri frakt över 299 kr","pros":["2 miljoner produkter","Snabb leverans 1–2 dagar","Lägsta-pris-garanti"]},{"name":"Apotek Hjärtat","url":"https://www.apotekhjartat.se","description":"Rådgivning av farmaceut — klick & hämta","badge":"Bäst kundservice","score":"4.6","price":"Fri frakt över 399 kr","pros":["Farmaceutrådgivning","Klick & hämta i butik","Stort sortiment"]},{"name":"Kronans Apotek","url":"https://www.kronansapotek.se","description":"Lojalitetsprogram med KronansPlus-rabatter","badge":"Bäst lojalitet","score":"4.5","price":"Fri frakt över 349 kr","pros":["KronansPlus-poäng","400+ butiker","Snabb service"]},{"name":"LloydsApotek","url":"https://www.lloydsapotek.se","description":"Internationell kedja med brett sortiment","badge":"Brett urval","score":"4.3","price":"Fri frakt över 349 kr","pros":["Brett sortiment","Välkänt märke","Enkel beställning"]},{"name":"Meds","url":"https://www.meds.se","description":"Prisvärt nätapotek med snabb leverans","badge":"Bäst pris","score":"4.4","price":"Fri frakt över 249 kr","pros":["Låga priser","Snabb leverans","Enkelt att beställa"]},{"name":"Apoteket","url":"https://www.apoteket.se","description":"Statligt apotek med trygg och etablerad service","badge":"Tryggast val","score":"4.2","price":"Fri frakt över 499 kr","pros":["Statligt ägd","Lång tradition","Farmaceutkompetens"]}];
+  var fallback = [{"name":"Gymgrossisten","url":"https://www.gymgrossisten.com","description":"Sveriges ledande hälsokostbutik — protein, vitaminer & kosttillskott","badge":"🏆 Störst i Sverige","score":"4.8","price":"Fri frakt över 499 kr","priceValue":499,"pros":["Störst sortiment i Sverige","Eget varumärke GG","Snabb leverans 1–2 dagar"]},{"name":"Bodystore","url":"https://www.bodystore.com","description":"Premium hälsokost med fokus på kvalitet och märkesprodukter","badge":"Bäst kvalitet","score":"4.7","price":"Fri frakt över 499 kr","priceValue":499,"pros":["Premium-märken","Bred kosttillskottssortiment","Kunnig kundtjänst"]},{"name":"Proteinbolaget","url":"https://www.proteinbolaget.se","description":"Prisvärt proteinpulver och sportnäring — bäst pris per kilo","badge":"Bäst pris/kilo","score":"4.6","price":"Fri frakt över 399 kr","priceValue":399,"pros":["Lägst pris på protein","Eget pulver i bulk","Snabb leverans"]},{"name":"iHerb","url":"https://www.iherb.com","description":"Internationellt utbud — 35 000+ produkter levererat till Sverige","badge":"Störst urval","score":"4.6","price":"Fri frakt över 555 kr","priceValue":555,"pros":["35 000+ produkter","Internationella märken","Kundrecensioner"]},{"name":"Holland & Barrett","url":"https://www.hollandandbarrett.se","description":"Brittisk hälsokedja med fokus på naturliga kosttillskott","badge":"Bäst naturligt","score":"4.5","price":"Fri frakt över 399 kr","priceValue":399,"pros":["Naturliga ingredienser","Veganska alternativ","Välkänt märke"]},{"name":"Sportamore","url":"https://www.sportamore.se","description":"Sport och träning — kläder, utrustning och sportnäring","badge":"Bäst sport-combo","score":"4.5","price":"Fri frakt över 499 kr","priceValue":499,"pros":["Sport + näring på ett ställe","Stora märken","Enkel retur"]},{"name":"Vitaminstore","url":"https://www.vitaminstore.se","description":"Specialiserad vitamin- och mineralbutik — enkelt att hitta rätt","badge":"Bäst vitaminer","score":"4.4","price":"Fri frakt över 349 kr","priceValue":349,"pros":["Enkel navigation","Specialiserat utbud","Bra priser"]},{"name":"Nyttoteket","url":"https://www.nyttoteket.se","description":"Ekologisk hälsokost och naturläkemedel — rena ingredienser","badge":"Bäst ekologiskt","score":"4.4","price":"Fri frakt över 499 kr","priceValue":499,"pros":["Ekologiska produkter","Naturläkemedel","Rena ingredienser"]}];
   var items = fallback.slice();
 
   return {
@@ -133,12 +133,7 @@ export default function Home({ providers, year, month, updated }) {
               <div style={{ display:'inline-flex', alignItems:'center', gap:5,
                 background:'#f0fdf4', color:'#15803d', padding:'4px 12px', borderRadius:20,
                 fontSize:12, fontWeight:700 }}>
-                ✓ Granskat av Hälsokostkollen redaktion
-              </div>
-              <div style={{ display:'inline-flex', alignItems:'center', gap:5,
-                background:'#fefce8', color:'#854d0e', padding:'4px 12px', borderRadius:20,
-                fontSize:12, fontWeight:700 }}>
-                ✓ Baserat på 35 timmars research
+                ✓ Oberoende jämförelse
               </div>
             </div>
             <h1 style={{ fontSize:'clamp(26px,4vw,46px)', fontWeight:800,
@@ -205,9 +200,7 @@ export default function Home({ providers, year, month, updated }) {
               gap:16, flexWrap:'wrap' }}>
               <div>
                 <div style={{ fontSize:11, color:pc, fontWeight:700, marginBottom:4 }}>
-                  {sortBy==='pris' ? 'Billigaste alternativet just nu'
-                   : sortBy==='namn' ? 'Toppalternativ'
-                   : 'Högst betyg av våra redaktörer'}
+                  {sortBy==='pris' ? 'Billigaste alternativet just nu' : 'Redaktionens val'}
                 </div>
                 <div style={{ fontSize:20, fontWeight:800, color:'#0f172a', marginBottom:4 }}>
                   {sorted[0].name}
@@ -226,72 +219,44 @@ export default function Home({ providers, year, month, updated }) {
         )}
 
         
-        <div style={{ display:'flex', flexDirection:'column', gap:14 }}>
-          {visible.map((p, i) => (
-            <div key={p.name} style={{
-              background:'#fff',
-              border: i===0 ? '2px solid '+pc : '1px solid #e2e8f0',
-              borderRadius:16, padding:'22px 26px',
-              position:'relative', boxShadow: i===0 ? '0 4px 24px '+pc+'18' : '0 1px 4px #0000000a',
-            }}>
-              {i===0 && (
-                <div style={{ position:'absolute', top:-15, left:22,
-                  background:pc, color:'#fff', fontSize:11,
-                  fontWeight:800, padding:'3px 14px', borderRadius:12, letterSpacing:'0.5px' }}>
-                  ⭐ REDAKTIONENS VAL
+        <div>
+          {visible[0] && (
+            <div style={{ display:'flex', gap:24, background:pc+'0d', border:'2px solid '+pc, borderRadius:18, padding:'24px 28px', marginBottom:22, flexWrap:'wrap' }}>
+              <div style={{ width:80, height:80, borderRadius:16, background:pc+'25', color:pc, display:'flex', alignItems:'center', justifyContent:'center', fontSize:34, fontWeight:800, flexShrink:0 }}>{visible[0].name[0]}</div>
+              <div style={{ flex:1, minWidth:200 }}>
+                <div style={{ fontSize:11, fontWeight:800, color:pc, letterSpacing:'0.5px', marginBottom:6, textTransform:'uppercase' }}>⭐ Redaktionens val</div>
+                <div style={{ fontSize:22, fontWeight:800, color:'#0f172a', marginBottom:6 }}>{visible[0].name}</div>
+                <div style={{ fontSize:14, color:'#64748b', marginBottom:12, lineHeight:1.6 }}>{visible[0].description}</div>
+                <div style={{ display:'flex', gap:16, alignItems:'center', flexWrap:'wrap' }}>
+                  <span style={{ fontSize:22, fontWeight:800, color:pc }}>{visible[0].currentPrice||visible[0].price}</span>
+                  {visible[0].badge && <span style={{ background:pc+'18', color:pc, fontSize:12, fontWeight:700, padding:'3px 10px', borderRadius:8 }}>{visible[0].badge}</span>}
                 </div>
-              )}
-              <div style={{ display:'flex', gap:20, alignItems:'center', flexWrap:'wrap' }}>
-                <div style={{ width:44, height:44, borderRadius:12,
-                  background: i===0 ? pcLight : '#f8fafc',
-                  display:'flex', alignItems:'center', justifyContent:'center',
-                  fontWeight:800, fontSize:16, color: i===0 ? pc : '#64748b',
-                  flexShrink:0, border:'1px solid '+(i===0 ? pcMed : '#e2e8f0') }}>
-                  {['1','2','3','4','5'][i] || (i+1)}
-                </div>
-                <div style={{ flex:1, minWidth:200 }}>
-                  <div style={{ fontWeight:800, fontSize:18, color:'#0f172a',
-                    marginBottom:3 }}>{p.name}</div>
-                  <div style={{ fontSize:13, color:'#64748b',
-                    marginBottom:10 }}>{p.description}</div>
-                  {p.pros && (
-                    <div style={{ display:'flex', flexDirection:'column', gap:5 }}>
-                      {p.pros.map((pro, j) => (
-                        <div key={j} style={{ display:'flex', gap:7, alignItems:'flex-start',
-                          fontSize:13 }}>
-                          <span style={{ color:pc, fontWeight:700,
-                            flexShrink:0 }}>✓</span>
-                          <span style={{ color:'#374151' }}>{pro}</span>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-                <div style={{ textAlign:'right', minWidth:190,
-                  display:'flex', flexDirection:'column',
-                  alignItems:'flex-end', gap:8 }}>
-                  <div style={{ fontSize:22, fontWeight:800, color:pc }}>
-                    {p.currentPrice || p.price}
-                  </div>
-                  <Stars score={p.score} />
-                  <div style={{ background:'#f0fdf4', color:'#15803d',
-                    fontSize:11, fontWeight:700, padding:'3px 10px',
-                    borderRadius:8 }}>{p.badge}</div>
-                  <AffBtn url={p.url} name={p.name} primary={i===0} />
-                  <button onClick={() => toggleSelect(p.name)}
-                    style={{ padding:'7px 14px', borderRadius:8, fontSize:12, fontWeight:600,
-                      cursor: selected.includes(p.name) || selected.length < 3 ? 'pointer' : 'not-allowed',
-                      fontFamily:'Inter,sans-serif', border:'1px solid',
-                      borderColor: selected.includes(p.name) ? pc : '#e2e8f0',
-                      background: selected.includes(p.name) ? pcLight : '#fff',
-                      color: selected.includes(p.name) ? pc : '#64748b',
-                      opacity: !selected.includes(p.name) && selected.length >= 3 ? 0.4 : 1 }}>
-                    {selected.includes(p.name) ? '✓ Vald' : '+ Jämför'}
-                  </button>
+                <div style={{ marginTop:12, display:'flex', gap:16, alignItems:'center', flexWrap:'wrap' }}>
+                  <AffBtn url={visible[0].url} name={visible[0].name} primary={true} />
+                  {visible[0].score && <span style={{ fontSize:13, color:'#64748b' }}>⭐ {visible[0].score}/10</span>}
                 </div>
               </div>
             </div>
-          ))}
+          )}
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(280px,1fr))', gap:14 }}>
+            {visible.slice(1).map((p, i) => (
+              <div key={p.name} style={{ background:'#fff', border:'1px solid #e2e8f0', borderRadius:14, padding:'20px 22px', display:'flex', flexDirection:'column', gap:10 }}>
+                <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start' }}>
+                  <div style={{ fontWeight:800, fontSize:16, color:'#0f172a' }}>{p.name}</div>
+                  {p.badge && <span style={{ fontSize:11, background:pc+'15', color:pc, padding:'2px 9px', borderRadius:8, fontWeight:700, flexShrink:0, marginLeft:8 }}>{p.badge}</span>}
+                </div>
+                <div style={{ fontSize:13, color:'#64748b', lineHeight:1.55 }}>{p.description}</div>
+                <div style={{ fontSize:20, fontWeight:800, color:pc }}>{p.currentPrice||p.price}</div>
+                <div style={{ display:'flex', flexDirection:'column', gap:4 }}>
+                  {(p.pros||[]).slice(0,2).map((pr,j) => (<div key={j} style={{ fontSize:12, color:'#374151', display:'flex', gap:6 }}><span style={{ color:pc, fontWeight:700 }}>✓</span>{pr}</div>))}
+                </div>
+                <div style={{ marginTop:'auto', paddingTop:10, display:'flex', alignItems:'center', justifyContent:'space-between' }}>
+                  {p.score && <span style={{ fontSize:12, color:'#94a3b8' }}>⭐ {p.score}/10</span>}
+                  <AffBtn url={p.url} name={p.name} primary={false} />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div style={{ textAlign:'center', marginTop:20, marginBottom:4, display:'flex', flexDirection:'column', alignItems:'center', gap:8 }}>
@@ -445,10 +410,10 @@ export default function Home({ providers, year, month, updated }) {
         <div style={{ maxWidth:760, margin:'0 auto' }}>
           <p style={{ fontSize:14, color:'#64748b', marginBottom:12, fontWeight:600 }}>Läs mer:</p>
           <div style={{ display:'flex', gap:14, flexWrap:'wrap' }}>
-            <a href="/vitaminer" style={{color:'#be185d',fontWeight:600,textDecoration:'none',fontSize:14}}>Bästa Vitaminer Online</a>
-            · <a href="/kosttillskott" style={{color:'#be185d',fontWeight:600,textDecoration:'none',fontSize:14}}>Bästa Kosttillskott</a>
-            · <a href="/vegansk" style={{color:'#be185d',fontWeight:600,textDecoration:'none',fontSize:14}}>Veganska Hälsoprodukter</a>
-            · <a href="/sport" style={{color:'#be185d',fontWeight:600,textDecoration:'none',fontSize:14}}>Sportnäring & Proteinpulver</a>
+            <a href="/vitaminer" style={{color:'#be185d',fontWeight:600,textDecoration:'none',fontSize:14}}>Bästa vitaminpreparat online</a>
+            · <a href="/kosttillskott" style={{color:'#be185d',fontWeight:600,textDecoration:'none',fontSize:14}}>Bästa kosttillskott</a>
+            · <a href="/vegansk" style={{color:'#be185d',fontWeight:600,textDecoration:'none',fontSize:14}}>Vegansk hälsokost</a>
+            · <a href="/sport" style={{color:'#be185d',fontWeight:600,textDecoration:'none',fontSize:14}}>Bästa sportnäring & proteinpulver</a>
           </div>
         </div>
       </section>
@@ -460,7 +425,7 @@ export default function Home({ providers, year, month, updated }) {
             <div style={{ maxWidth:260 }}>
               <div style={{ fontWeight:800, color:'#fff', fontSize:18, marginBottom:10 }}>Hälsokostkollen</div>
               <p style={{ fontSize:13, lineHeight:1.75 }}>
-                Oberoende jämförelsetjänst för svenska konsumenter. Vi jämför 6 alternativ inom hälsa.
+                Oberoende jämförelsetjänst för svenska konsumenter. Vi jämför 8 alternativ inom hälsa.
               </p>
             </div>
             <div>
@@ -475,21 +440,21 @@ export default function Home({ providers, year, month, updated }) {
             <div>
               <div style={{ fontWeight:700, color:'#e2e8f0', marginBottom:14, fontSize:12, textTransform:'uppercase', letterSpacing:'0.5px' }}>Se även</div>
               <div style={{ display:'flex', flexDirection:'column', gap:10, fontSize:14 }}>
-                <Link href="/vitaminer" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Bästa Vitaminer Online</Link>
-                <Link href="/kosttillskott" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Bästa Kosttillskott</Link>
-                <Link href="/vegansk" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Veganska Hälsoprodukter</Link>
-                <Link href="/sport" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Sportnäring & Proteinpulver</Link>
-                <Link href="/online" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Nätapotek Jämförelse</Link>
+                <Link href="/vitaminer" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Bästa vitaminpreparat online</Link>
+                <Link href="/kosttillskott" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Bästa kosttillskott</Link>
+                <Link href="/vegansk" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Vegansk hälsokost</Link>
+                <Link href="/sport" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Bästa sportnäring & proteinpulver</Link>
+                <Link href="/online" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Bästa hälsokostbutik online</Link>
               </div>
             </div>
             <div>
               <div style={{ fontWeight:700, color:'#e2e8f0', marginBottom:14, fontSize:12, textTransform:'uppercase', letterSpacing:'0.5px' }}>Jämförelser</div>
               <div style={{ display:'flex', flexDirection:'column', gap:10, fontSize:14 }}>
-                <Link href="/jamfor/apotea-vs-apotek-hjartat" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Apotea vs Apotek Hjärtat</Link>
-                <Link href="/jamfor/apotea-vs-kronans-apotek" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Apotea vs Kronans Apotek</Link>
-                <Link href="/jamfor/apotea-vs-lloydsapotek" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Apotea vs LloydsApotek</Link>
-                <Link href="/jamfor/apotea-vs-meds" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Apotea vs Meds</Link>
-                <Link href="/jamfor/apotea-vs-apoteket" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Apotea vs Apoteket</Link>
+                <Link href="/jamfor/gymgrossisten-vs-bodystore" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Gymgrossisten vs Bodystore</Link>
+                <Link href="/jamfor/gymgrossisten-vs-proteinbolaget" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Gymgrossisten vs Proteinbolaget</Link>
+                <Link href="/jamfor/gymgrossisten-vs-iherb" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Gymgrossisten vs iHerb</Link>
+                <Link href="/jamfor/gymgrossisten-vs-holland-barrett" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Gymgrossisten vs Holland & Barrett</Link>
+                <Link href="/jamfor/gymgrossisten-vs-sportamore" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Gymgrossisten vs Sportamore</Link>
               </div>
             </div>
           </div>
